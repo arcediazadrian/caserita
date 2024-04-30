@@ -196,26 +196,26 @@ Note: We have to see how we handle metric units
 
 ## Tech Stack
 
-**1. Source Control. SaaS, Free, Public. MD support
-    1. Github
-2. Database. SQL or NoSQL. Nice to have. integrates well with code and has migrations (Entity Framework?, DB Migrations?)
-    1. SQLServer
-3. Map. Free, user can mark a place.
-    1. Openstreet
-4. Core Code.
-    1. C# .NET.**
-*5. AI Code. Hook up to the chosen AI provider. Promising libraries for handling LLMs and Computer Vision for the reader. Is Computer Vision the correct term for the reader?
-    1. Python
-    2. C# .NET
-6. AI Provider. LLMs and Computer Vision Provider, Free/Low Cost
-    1. OpenAI
-    2. Google Gemini*
-**7. Pipelines. Compatible with Source Control. Free Tier or can create an Agent. Compatible with Cloud would be a Nice To Have.
-    1. Github Actions
-8. Cloud. Free/Low Cost, DB, BE (Public URL with SSL [https://appName.webapp.firebase.io](https://appname.webapp.firebase.io/)), Auth provider would be a Nice to Have
-    1. Azure
-9. Board. Free and Public would be a Nice to Have
-    1. Trello**
+**1. Source Control. SaaS, Free, Public. MD support**
+    **1. Github**
+**2. Database. SQL or NoSQL. Nice to have. integrates well with code and has migrations (Entity Framework?, DB Migrations?)**
+    **1. SQLServer**
+**3. Map. Free, user can mark a place.**
+    **1. Openstreet**
+**4. Core Code.**
+    **1. C# .NET.**
+*5. AI Code. Hook up to the chosen AI provider. Promising libraries for handling LLMs and Computer Vision for the reader. Is Computer Vision the correct term for the reader?*
+    *1. Python*
+    *2. C# .NET*
+*6. AI Provider. LLMs and Computer Vision Provider, Free/Low Cost*
+    *1. OpenAI*
+    *2. Google Gemini*
+**7. Pipelines. Compatible with Source Control. Free Tier or can create an Agent. Compatible with Cloud would be a Nice To Have.**
+    **1. Github Actions**
+**8. Cloud. Free/Low Cost, DB, BE (Public URL with SSL [https://appName.webapp.firebase.io](https://appname.webapp.firebase.io/)), Auth provider would be a Nice to Have**
+    **1. Azure**
+**9. Board. Free and Public would be a Nice to Have**
+    **1. Trello**
 
 AI Provider and Cloud assume a possible investment. Maximum during project lifetime $200.
 
