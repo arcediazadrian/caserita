@@ -71,7 +71,7 @@ Planning hours so far: 10hx2
 
 | EPIC     | FEATURE  | USER STORY  | TASK     |
 |----------|----------|-------------|----------|
-| 1. 2. 3. | a. b. c. | i. ii. iii. | 1. 2. 3. |
+| 1. 2. 3. | i. ii. iii. | a. b. c. | a. b. c. |
 
 Shopping assistant
 1. Project setup
