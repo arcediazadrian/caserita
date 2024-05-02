@@ -100,28 +100,27 @@ Shopping assistant
     7. Decide if we're going to use DB migrations or do them manually | 2h
         1. Research tools to apply migrations
         2. Create local script to run migrations
-    8. AI Provider PoC | 4h
-    9. Set up local environment
+    8. Set up local environment
         1. Be able to download code and run it in an IDE | 10minx2
         2. For db use docker | 30minx2
         3. Connect to AI provider | 30min
-    10. Set up cloud environment
+    9. Set up cloud environment
         1. Access the cloud and initial configuration | 2h
         2. Create the DB server | 1h
         3. Create the BE function/server and confirm that some request works | 2h
         4. Connect to AI provider | 30min
-    11. Identity Provider Research
+    10. Identity Provider Research
         1. Research what tool we're going to use to handle user authentication | 2h
             1. Keycloak
             2. Azure AD/Entra ID
         2. Make a PoC of the tool | 8h
             1. Tool working locally (service and db)
             2. Create webpage to login or a postman endpoint or test
-    12. Create pipeline to deploy code and db migrations. | 5h
-    13. LLMs PoC | 6h
+    11. Create pipeline to deploy code and db migrations. | 5h
+    12. LLMs PoC | 6h
         1. Use GPT 3.5 Turbo
         2. Do a small test for point 3.a.iii in Python.
-    14. OCR/Computer Vision PoC | 4h
+    13. OCR/Computer Vision PoC | 4h
         1. Use Azure OCR/Document Intelligence/AI Vision
         2. Be able to take a photo of a receipt and recognize the text
         3. If it can put it in JSON format directly it's a plus
