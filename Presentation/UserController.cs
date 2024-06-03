@@ -7,14 +7,14 @@ using Microsoft.Extensions.Logging;
 
 namespace Presentation
 {
-    public class UserFunction
+    public class UserController
     {
         private readonly ILogger _logger;
         private readonly IUserService _userService;
 
-        public UserFunction(ILoggerFactory loggerFactory, IUserService userService)
+        public UserController(ILoggerFactory loggerFactory, IUserService userService)
         {
-            _logger = loggerFactory.CreateLogger<UserFunction>();
+            _logger = loggerFactory.CreateLogger<UserController>();
             _userService = userService;
         }
 

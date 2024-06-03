@@ -5,9 +5,9 @@ namespace Business
     public class UserService : IUserService
     {
         private readonly IUserData _userData;
-        public UserService(IUserData injectedUserData)
+        public UserService(IUserData userData)
         {
-            _userData = injectedUserData;
+            _userData = userData;
         }
         public User CreateNewUser()
         {
