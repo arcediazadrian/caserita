@@ -12,16 +12,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caserita_Presentation", "Pr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caserita_Domain", "Domain\Caserita_Domain.csproj", "{CE5C069C-1142-49B9-B53E-41700EC205BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caserita_Data", "Data\Caserita_Data.csproj", "{66A68191-8B40-4C03-BFBD-8FE16CB6E922}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caserita_Data", "Data\Caserita_Data.csproj", "{66A68191-8B40-4C03-BFBD-8FE16CB6E922}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CE5C069C-1142-49B9-B53E-41700EC205BA} = {CE5C069C-1142-49B9-B53E-41700EC205BA}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caserita_Business", "Business\Caserita_Business.csproj", "{8B416F88-FA48-48B6-A65B-709364D01967}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caserita_Business", "Business\Caserita_Business.csproj", "{8B416F88-FA48-48B6-A65B-709364D01967}"
 	ProjectSection(ProjectDependencies) = postProject
 		{66A68191-8B40-4C03-BFBD-8FE16CB6E922} = {66A68191-8B40-4C03-BFBD-8FE16CB6E922}
 		{CE5C069C-1142-49B9-B53E-41700EC205BA} = {CE5C069C-1142-49B9-B53E-41700EC205BA}
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caserita_Middlewares", "Middlewares\Caserita_Middlewares.csproj", "{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{8B416F88-FA48-48B6-A65B-709364D01967}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B416F88-FA48-48B6-A65B-709364D01967}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B416F88-FA48-48B6-A65B-709364D01967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

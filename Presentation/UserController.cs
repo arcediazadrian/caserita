@@ -30,5 +30,11 @@ namespace Presentation
 
             return response;
         }
+
+        [Function("ThrowException")]
+        public HttpResponseData ThrowException([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req)
+        {
+            throw new Exception("It failed");
+        }
     }
 }
