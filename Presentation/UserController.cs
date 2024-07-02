@@ -1,5 +1,6 @@
-using System.Net;
+﻿using System.Net;
 using System.Text.Json;
+using Domain;
 using Domain.Interfaces;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
@@ -32,9 +33,17 @@ namespace Presentation
         }
 
         [Function("ThrowException")]
-        public HttpResponseData ThrowException([HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req)
+        public HttpResponseData ThrowException([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "ThrowException/{identifier?}")] HttpRequestData req, int identifier = 0)
         {
-            throw new Exception("It failed");
+            if (identifier == 1)
+            {
+                throw new InvalidInputException("Double send on Integer value");
+            }
+            else
+            {
+                throw new Exception("It failed");
+            }
+            
         }
     }
 }
