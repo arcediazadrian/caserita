@@ -29,25 +29,30 @@ namespace Middlewares
 
                 if (httpReqData != null)
                 {
-                    HttpResponseData newHttpResponse;
-                    switch (exception)
-                    {
-                        case InvalidInputException ex:
-                            newHttpResponse = httpReqData.CreateResponse(HttpStatusCode.BadRequest);
-                            await newHttpResponse.WriteAsJsonAsync(new { ExceptionMessage = ex.Message }, newHttpResponse.StatusCode);
-                            break;
-                        default:
-                            // Create an instance of HttpResponseData with 500 status code.
-                            newHttpResponse = httpReqData.CreateResponse(HttpStatusCode.InternalServerError);
-                            // You need to explicitly pass the status code in WriteAsJsonAsync method.
-                            // https://github.com/Azure/azure-functions-dotnet-worker/issues/776
-                            await newHttpResponse.WriteAsJsonAsync(new { FooStatus = "Invocation failed!" }, newHttpResponse.StatusCode);
-                            break;
-                    }
                     var invocationResult = context.GetInvocationResult();
-                    invocationResult.Value = newHttpResponse;
+                    invocationResult.Value = await BuildHttpResponse(exception, httpReqData);
                 }
             }
+        }
+
+        private async Task<HttpResponseData> BuildHttpResponse(Exception exception, HttpRequestData httpReqData)
+        {
+            HttpResponseData httpResponse;
+            switch (exception)
+            {
+                case InvalidInputException ex:
+                    httpResponse = httpReqData.CreateResponse(HttpStatusCode.BadRequest);
+                    await httpResponse.WriteAsJsonAsync(new { ExceptionMessage = ex.Message }, httpResponse.StatusCode);
+                    break;
+                default:
+                    // Create an instance of HttpResponseData with 500 status code.
+                    httpResponse = httpReqData.CreateResponse(HttpStatusCode.InternalServerError);
+                    // You need to explicitly pass the status code in WriteAsJsonAsync method.
+                    // https://github.com/Azure/azure-functions-dotnet-worker/issues/776
+                    await httpResponse.WriteAsJsonAsync(new { FooStatus = "Invocation failed!" }, httpResponse.StatusCode);
+                    break;
+            }
+            return httpResponse;
         }
     }
 }
