@@ -1,4 +1,6 @@
-﻿namespace Domain.Interfaces
+﻿using Caserita_Domain.Entities;
+
+namespace Domain.Interfaces
 {
     public interface IUserData
     {

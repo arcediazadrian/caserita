@@ -1,4 +1,4 @@
-﻿using Domain;
+﻿using Caserita_Domain.Entities;
 using Domain.Interfaces;
 namespace Business
 {

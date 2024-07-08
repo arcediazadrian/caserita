@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    cap_add: [ 'SYS_PTRACE' ]
+    environment: 
+      - "ACCEPT_EULA=1"
+      - "MSSQL_SA_PASSWORD=caseritaDB!23"
+    ports:
+      - "1433:1433"
+    hostname: mssql
+    volumes:
+      - ./docker:/caserita
