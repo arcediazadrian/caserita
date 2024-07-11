@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caserita_Business", "Busine
 		{CE5C069C-1142-49B9-B53E-41700EC205BA} = {CE5C069C-1142-49B9-B53E-41700EC205BA}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caserita_Middlewares", "Middlewares\Caserita_Middlewares.csproj", "{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{8B416F88-FA48-48B6-A65B-709364D01967}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B416F88-FA48-48B6-A65B-709364D01967}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B416F88-FA48-48B6-A65B-709364D01967}.Release|Any CPU.Build.0 = Release|Any CPU
-		{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{035CA57A-CD60-4EF2-B1FF-12AB0C8A6B62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

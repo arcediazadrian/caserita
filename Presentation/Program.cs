@@ -3,13 +3,13 @@ using Caserita_Data;
 using Caserita_Data.Repos;
 using Caserita_Domain.Interfaces;
 using Caserita_Presentation.MappingProfiles;
+using Caserita_Presentation.Middlewares;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Middlewares;
 
 var host = new HostBuilder()
     .ConfigureFunctionsWorkerDefaults(workerApplication =>

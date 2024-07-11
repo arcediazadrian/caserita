@@ -1,7 +1,7 @@
 using AutoMapper;
 using Caserita_Domain.Entities;
+using Caserita_Domain.Exceptions;
 using Caserita_Domain.Interfaces;
-using Domain;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
