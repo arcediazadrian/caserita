@@ -1,9 +1,9 @@
 ﻿using Caserita_Domain.Entities;
 
-namespace Domain.Interfaces
+namespace Caserita_Domain.Interfaces
 {
     public interface IUserService
     {
-        public User CreateNewUser();
+        Task<User> CreateUser(User user);
     }
 }

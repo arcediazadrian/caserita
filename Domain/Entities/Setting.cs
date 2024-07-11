@@ -6,7 +6,7 @@ namespace Caserita_Domain.Entities
     {
         [Key]
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public ICollection<UserSetting> UserSettings { get; set; }
+        public string Name { get; set; } = null!;
+        public ICollection<UserSetting>? UserSettings { get; set; }
     }
 }

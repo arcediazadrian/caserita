@@ -1,17 +1,20 @@
 ﻿using Caserita_Domain.Entities;
-using Domain.Interfaces;
-namespace Business
+using Caserita_Domain.Interfaces;
+
+namespace Caserita_Business
 {
     public class UserService : IUserService
     {
-        private readonly IUserData _userData;
-        public UserService(IUserData userData)
+        private readonly IUserRepo _userRepo;
+
+        public UserService(IUserRepo userRepo)
         {
-            _userData = userData;
+            _userRepo = userRepo;
         }
-        public User CreateNewUser()
+
+        public async Task<User> CreateUser(User user)
         {
-            return _userData.CreateNewUser();
+            return await _userRepo.CreateUser(user);
         }
     }
 }

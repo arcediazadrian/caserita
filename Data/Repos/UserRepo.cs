@@ -1,9 +1,7 @@
 ﻿using Caserita_Domain.Entities;
 using Caserita_Domain.Interfaces;
-using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
 
-namespace Caserita_Data
+namespace Caserita_Data.Repos
 {
     public class UserRepo : IUserRepo
     {
