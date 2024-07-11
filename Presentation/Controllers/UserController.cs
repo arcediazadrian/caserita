@@ -1,6 +1,7 @@
 using AutoMapper;
 using Caserita_Domain.Entities;
 using Caserita_Domain.Interfaces;
+using Domain;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
@@ -29,6 +30,20 @@ namespace Caserita_Presentation.Controllers
             var response = req.CreateResponse(HttpStatusCode.OK);
             await response.WriteAsJsonAsync(_mapper.Map<DTOs.Output.UserDto>(createdUser));
             return response;
+        }
+
+        [Function("ThrowException")]
+        public HttpResponseData ThrowException([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "ThrowException/{identifier?}")] HttpRequestData req, int identifier = 0)
+        {
+            if (identifier == 1)
+            {
+                throw new InvalidInputException("Double send on Integer value");
+            }
+            else
+            {
+                throw new Exception("It failed");
+            }
+
         }
     }
 }
