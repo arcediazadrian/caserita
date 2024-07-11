@@ -1,7 +1,7 @@
 ﻿using Caserita_Domain.Entities;
 using Caserita_Domain.Interfaces;
 
-namespace Caserita_Business
+namespace Caserita_Business.Services
 {
     public class UserService : IUserService
     {
