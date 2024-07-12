@@ -28,7 +28,14 @@ git clone https://github.com/arcediazadrian/caserita.git
 
 ### 2. Set up the database
 
-Ensure you have an Azure SQL Database or a local SQL Server instance. Update the local.settings.json file with your connection string.
+Create the local DB with Docker with the following commands.
+
+```console
+docker compose up -d
+setup-db.bat
+```
+
+And update the local.settings.json file with your connection string.
 
 local.settings.json:
 
@@ -47,7 +54,9 @@ local.settings.json:
 
 ### 3. Apply Migrations
 
-To update the DB with a command you need to open a Package Manager console (Tools > NuGet Package Manager > Package Manager Console) in Visual Studio and run:
+DB Migrations will run when the app starts and be applied automatically, the code for that is on Program.cs
+
+However, if you need to update the DB with a command you need to open a Package Manager console (Tools > NuGet Package Manager > Package Manager Console) in Visual Studio and run:
 
 ```PM console
 Update-Database -Project Caserita_Data -StartupProject Caserita_Presentation
