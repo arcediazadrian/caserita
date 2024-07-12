@@ -4,6 +4,7 @@ using Caserita_Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Caserita_Data.Migrations
 {
     [DbContext(typeof(CaseritaDbContext))]
-    partial class CaseritaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240712051513_SimplyfingUserSettingRelationship")]
+    partial class SimplyfingUserSettingRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

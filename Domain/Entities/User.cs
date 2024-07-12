@@ -10,6 +10,6 @@ namespace Caserita_Domain.Entities
         public string Email { get; set; } = null!;
         public DateTime BirthDate { get; set; }
         public int Age { get; set; }
-        public ICollection<UserSetting>? UserSettings { get; set; }
+        public ICollection<Setting>? Settings { get; set; }
     }
 }

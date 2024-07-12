@@ -8,10 +8,10 @@ namespace Caserita_Presentation.MappingProfiles
         public CaseritaMappingProfile()
         {
             CreateMap<DTOs.Input.UserDto, User>()
-                .ForMember(dest => dest.UserSettings, opt => opt.MapFrom((src) =>
+                .ForMember(dest => dest.Settings, opt => opt.MapFrom((src) =>
                     src.SettingIds == null ?
-                        new List<UserSetting>() :
-                        src.SettingIds.Select(sid => new UserSetting { SettingId = sid })
+                        new List<Setting>() :
+                        src.SettingIds.Select(sid => new Setting { Id = sid })
                 ));
 
             CreateMap<User, DTOs.Output.UserDto>();

@@ -42,14 +42,11 @@ namespace Caserita_Presentation.Middlewares
             {
                 case InvalidInputException ex:
                     httpResponse = httpReqData.CreateResponse(HttpStatusCode.BadRequest);
-                    await httpResponse.WriteAsJsonAsync(new { ExceptionMessage = ex.Message }, httpResponse.StatusCode);
+                    await httpResponse.WriteAsJsonAsync(new { Message = ex.Message }, httpResponse.StatusCode);
                     break;
                 default:
-                    // Create an instance of HttpResponseData with 500 status code.
                     httpResponse = httpReqData.CreateResponse(HttpStatusCode.InternalServerError);
-                    // You need to explicitly pass the status code in WriteAsJsonAsync method.
-                    // https://github.com/Azure/azure-functions-dotnet-worker/issues/776
-                    await httpResponse.WriteAsJsonAsync(new { FooStatus = "Invocation failed!" }, httpResponse.StatusCode);
+                    await httpResponse.WriteAsJsonAsync(new { Message = "Something went wrong!" }, httpResponse.StatusCode);
                     break;
             }
             return httpResponse;

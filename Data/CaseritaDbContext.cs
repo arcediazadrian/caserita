@@ -21,23 +21,15 @@ namespace Caserita_Data
                 .HasKey(u => u.Id);
 
             modelBuilder.Entity<User>()
-                .HasMany(u => u.UserSettings);
+                .HasMany(u => u.Settings)
+                .WithMany(s => s.Users)
+                .UsingEntity<UserSetting>();
 
             modelBuilder.Entity<Setting>()
                 .HasKey(s => s.Id);
 
             modelBuilder.Entity<UserSetting>()
                 .HasKey(us => new { us.UserId, us.SettingId });
-
-            modelBuilder.Entity<UserSetting>()
-                .HasOne(us => us.User)
-                .WithMany(u => u.UserSettings)
-                .HasForeignKey(us => us.UserId);
-
-            modelBuilder.Entity<UserSetting>()
-                .HasOne(us => us.Setting)
-                .WithMany(s => s.UserSettings)
-                .HasForeignKey(us => us.SettingId);
         }
     }
 }

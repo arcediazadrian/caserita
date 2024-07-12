@@ -7,6 +7,6 @@
         public string Email { get; set; } = null!;
         public DateTime BirthDate { get; set; }
         public int Age { get; set; }
-        public IEnumerable<Guid> SettingIds { get; set; } = [];
+        public IEnumerable<SettingDto> Settings { get; set; } = [];
     }
 }

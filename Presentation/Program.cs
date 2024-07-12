@@ -26,6 +26,8 @@ var host = new HostBuilder()
 
         services.AddSingleton<IUserService, UserService>();
         services.AddSingleton<IUserRepo, UserRepo>();
+        services.AddSingleton<ISettingService, SettingService>();
+        services.AddSingleton<ISettingRepo, SettingRepo>();
 
         services.AddAutoMapper(typeof(CaseritaMappingProfile));
     })
