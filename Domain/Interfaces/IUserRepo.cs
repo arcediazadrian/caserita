@@ -2,7 +2,7 @@
 
 namespace Caserita_Domain.Interfaces
 {
-    public interface IUserService
+    public interface IUserRepo
     {
         Task<User> CreateUser(User user);
         Task<User?> GetUserById(Guid id);

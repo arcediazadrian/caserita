@@ -7,17 +7,21 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.22.0" />
-    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.2.0" />
-    <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.17.2" />
-    <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.22.0" />
-    <PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="1.2.0" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+	<PackageReference Include="Microsoft.Azure.Functions.Worker" Version="1.22.0" />
+	<PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http" Version="3.2.0" />
+	<PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk" Version="1.17.2" />
+	<PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.22.0" />
+	<PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights" Version="1.2.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Caserita_Business.csproj" />
     <ProjectReference Include="..\Data\Caserita_Data.csproj" />
     <ProjectReference Include="..\Domain\Caserita_Domain.csproj" />
-    <ProjectReference Include="..\Middlewares\Caserita_Middlewares.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
